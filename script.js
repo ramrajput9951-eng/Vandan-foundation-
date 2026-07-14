@@ -238,20 +238,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------- Volunteer form submit ---------- */
-document.getElementById('bookingForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('fname').value;
-  const phone = document.getElementById('fphone').value;
-  const guests = document.getElementById('fguests').value;
-  const msg = document.getElementById('fmsg').value;
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  const text = `Hi VANDAN FOUNDATION, I want to join as a Volunteer, here is my detailse.%0A%0A`
-    + `Name: ${encodeURIComponent(name)}%0A`
-    + `Mobile: ${encodeURIComponent(phone)}%0A`
-    + `Age: ${encodeURIComponent(guests)}%0A`
-    + (msg ? `Message: ${encodeURIComponent(msg)}%0A` : '');
+    const name = document.getElementById("fname").value.trim();
+    const phone = document.getElementById("fphone").value.trim();
+    const age = document.getElementById("fguests").value.trim();
+    const message = document.getElementById("fmsg").value.trim();
 
-  window.open(`https://wa.me/918306608339?text=${text}`, '_blank');
+    if (name === "" || phone === "" || age === "") {
+        alert("Please fill all required fields.");
+        return;
+    }
+
+    const whatsappNumber = "919327863557";
+
+    const whatsappMessage =
+`*🌟 Volunteer Registration Form 🌟*
+
+👤 *Name:* ${name}
+📱 *Mobile:* ${phone}
+🎂 *Age:* ${age}
+
+📝 *Message:*
+${message || "No message provided."}`;
+
+    const url = `https://wa.me/$919327863557?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(url, "_blank");
 });
 
   /* ---------- File input label update ---------- */
