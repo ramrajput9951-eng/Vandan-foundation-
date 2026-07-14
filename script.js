@@ -245,13 +245,13 @@ document.getElementById('bookingForm').addEventListener('submit', function(e){
   const guests = document.getElementById('fguests').value;
   const msg = document.getElementById('fmsg').value;
 
-  const text = `Hi Waffle Co.! I'd like to book a table.%0A%0A`
+  const text = `Hi VANDAN FOUNDATION, I want to join as a Volunteer, here is my detailse.%0A%0A`
     + `Name: ${encodeURIComponent(name)}%0A`
     + `Mobile: ${encodeURIComponent(phone)}%0A`
-    + `Guests: ${encodeURIComponent(guests)}%0A`
+    + `Age: ${encodeURIComponent(guests)}%0A`
     + (msg ? `Message: ${encodeURIComponent(msg)}%0A` : '');
 
-  window.open(`https://wa.me/919999999999?text=${text}`, '_blank');
+  window.open(`https://wa.me/918306608339?text=${text}`, '_blank');
 });
 
   /* ---------- File input label update ---------- */
