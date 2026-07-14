@@ -237,6 +237,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+
+  /* ---------- File input label update ---------- */
+  document.querySelectorAll('.field-file input[type="file"]').forEach(input => {
+    input.addEventListener('change', () => {
+      const label = input.closest('.field-file').querySelector('.file-label');
+      label.textContent = input.files.length ? input.files[0].name : label.getAttribute('data-default');
+    });
+  });
+
+});
+
+
   /* ---------- Volunteer form submit ---------- */
 document.getElementById("bookingForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -263,17 +276,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
 📝 *Message:*
 ${message || "No message provided."}`;
 
-    const url = `https://wa.me/$919327863557?text=${encodeURIComponent(whatsappMessage)}`;
+    const url = `https://wa.me/919327863557?text=${encodeURIComponent(whatsappMessage)}`;
 
     window.open(url, "_blank");
-});
-
-  /* ---------- File input label update ---------- */
-  document.querySelectorAll('.field-file input[type="file"]').forEach(input => {
-    input.addEventListener('change', () => {
-      const label = input.closest('.field-file').querySelector('.file-label');
-      label.textContent = input.files.length ? input.files[0].name : label.getAttribute('data-default');
-    });
-  });
-
 });
