@@ -534,3 +534,19 @@ footer h5{color:#fff;font-family:'Fraunces',serif;font-size:16px;margin-bottom:1
 .gallery1 img:hover{
     transform:scale(1.05);
 }
+
+
+/* Ensure the logo container uses flexbox for alignment */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+}
+
+/* Control the size of your logo */
+.site-logo {
+    height: 50px;       /* Set a fixed height */
+    width: auto;        /* Maintains the original aspect ratio */
+    display: block;     /* Removes extra whitespace below the image */
+}
