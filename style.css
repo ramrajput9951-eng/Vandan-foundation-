@@ -53,7 +53,7 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
   transition:background .35s ease,color .35s ease;
-  width: 700px;
+  width: 450px;
   overflow-x: hidden; /* Hides horizontal scrollbars */
   margin: 0;
   padding: 0;
